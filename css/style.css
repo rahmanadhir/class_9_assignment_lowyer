@@ -1,0 +1,410 @@
+*{
+    margin: 0;
+    padding: 0; 
+}
+/* header section  */
+header{
+    
+    background-color: #fff;
+    padding: 15px 0;
+    position: relative;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: #204f87!important;
+}
+
+/* banner section  */
+
+.banner{
+    background-image: url(../images/banner);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+}
+.banner h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 80px;
+    font-weight: 700;
+    padding: 0px;
+    text-transform: uppercase;
+}
+.icon-2{
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 25px;
+    animation: updown 1s infinite linear;
+    animation-direction: alternate;
+}
+@keyframes updown{
+    0%{
+        bottom: 15%;
+    }
+    100%{
+        bottom:10%;
+    }
+}
+
+/* who-we-are-section  */
+
+.who-we-are{
+    padding: 50px 0;
+    
+}
+.who-we-are span,
+.what-we-do span,
+.our-attorneys span,
+.languages-section span,
+.contact-section span{
+    position: relative;
+    height: 4px;
+    width: 65px;
+    display: block;
+}
+.who-we-are span::after,
+.what-we-do span::after,
+.our-attorneys span::after,
+.languages-section span::after,
+.contact-section span::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 0%;
+    background-color: #f2622c;
+    margin-bottom: 20px;
+    transition: 0.4s all ease-in-out;
+}
+.who-we-are:hover span::after,
+.what-we-do:hover span::after,
+.our-attorneys:hover span::after,
+.languages-section:hover span::after,
+.contact-section:hover span::after {
+    width: 100%;
+}
+
+.who-we-are h2{
+    color: #2b2f85;
+    text-transform: uppercase;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    
+}
+    
+    
+.who-we-are p{ 
+    color: #b0b0b1; 
+    font-size: 14px;
+    
+}
+/* what-we-do-section  */
+.what-we-do{
+    background-color: #f7f8f8;
+    padding-top: 80px;
+    position: relative;
+    z-index: 0;
+}
+.what-we-do h2{
+    color: #2b2f85;
+    text-transform: uppercase;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.bg-what-we-do{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 53%;
+    height: 660px;
+    z-index: -1;
+}
+.client-images{
+    padding: 50px 0 80px 0;
+}
+.client-img{
+    position: relative;
+}
+.client-img::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    transition: 0.4s all ease-in-out;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2c3083+89,2b3083+100&0+50,1+100 */
+    background: -moz-linear-gradient(
+      top,
+      rgba(44, 48, 131, 0) 50%,
+      rgba(44, 48, 131, 0.78) 89%,
+      rgba(43, 48, 131, 1) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(44, 48, 131, 0) 50%,
+      rgba(44, 48, 131, 0.78) 89%,
+      rgba(43, 48, 131, 1) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      rgba(44, 48, 131, 0) 50%,
+      rgba(44, 48, 131, 0.78) 89%,
+      rgba(43, 48, 131, 1) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002c3083', endColorstr='#2b3083',GradientType=0 ); /* IE6-9 */
+}
+.client-img:hover::after{
+    height: 100%;
+}
+.client-img-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.4s all ease-in-out;
+    opacity: 0;
+    z-index: 99;
+}
+.client-img:hover .client-img-text{
+    opacity: 100%;
+    animation: client-text 0.4s ease-in-out backwards;
+  }
+  @keyframes client-text{
+    0% {
+      top: 40%;
+    }
+    100% {
+      top: 50%;
+    }
+}
+.client-img-text h3{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0;
+  }
+.client-img-arrow{
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    left: 50%;
+    bottom: 70px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.4s all ease-in-out;
+    z-index: 99;
+}
+.client-img:hover .client-img-arrow{
+    opacity: 100%;
+    animation: client-arrow 0.4s ease-in-out backwards;
+  }
+  @keyframes client-arrow {
+    0% {
+      left: 40%;
+    }
+    100% {
+      left: 50%;
+    }
+}
+
+/* our attorney  */
+.our-attorneys{
+    background-image: url("../images/our-attorney-bg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+.our-attorneys h2,
+.contact-section h2{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.our-attorneys p{
+    color: #929dcf;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+.our-attorneys h6{
+    color: #f2622c;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+.attorneys-img{
+    position: relative;
+}
+.attorneys-img::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0%;
+    width: 100%;
+    transition: 0.4s all ease-in-out;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#191446+89,191446+100&0+50,1+100 */
+    background: -moz-linear-gradient(
+      top,
+      rgba(25, 20, 70, 0) 50%,
+      rgba(25, 20, 70, 0.78) 89%,
+      rgba(25, 20, 70, 1) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(25, 20, 70, 0) 50%,
+      rgba(25, 20, 70, 0.78) 89%,
+      rgba(25, 20, 70, 1) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      rgba(25, 20, 70, 0) 50%,
+      rgba(25, 20, 70, 0.78) 89%,
+      rgba(25, 20, 70, 1) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00191446', endColorstr='#191446',GradientType=0 ); /* IE6-9 */
+}
+.attorneys-img:hover::after{
+    height: 100%;
+}
+.attorneys-text{
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    z-index: 99;
+    opacity: 0;
+    transition: 0.4s all ease-in-out;
+}
+.attorneys-img:hover .attorneys-text{
+    opacity: 100%;
+    animation: attorneys-text 0.4s ease-in-out forwards;
+}
+@keyframes attorneys-text{
+    0% {
+      left: 0px;
+    }
+    100% {
+      left: 50px;
+    }
+}
+.attorneys-text h3{
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+/* languages section start  */
+.languages-section {
+    padding: 80px 0;
+}
+.languages-section h2 {
+    color: #28377e;
+    text-transform: uppercase;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.languages-section h3 {
+    color: #28377e;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+}
+.languages-section p {
+    font-size: 14px;
+    color: #b1b0b1;
+}
+.languages-section h6 {
+    color: #f2622c;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+/* contact section start  */
+.contact-section{
+    padding: 80px 0 60px 0;
+    background-color: #28377e;
+}
+.contact-section form input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #4759a7;
+    outline: none;
+    color: #fff;
+    padding-bottom: 5px;
+}
+.contact-section form input::placeholder{
+    color: #fff;
+    font-size: 14px;
+}
+.contact-section form input[type="submit"]{
+    border: none;
+    background-color: #f2622c;
+    color: #fff;
+    text-transform: uppercase;
+    width: auto;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 2px;
+    padding: 6px 60px;
+    
+    
+}
+/* footer start  */
+footer{
+    background-color: #0d1234;
+    padding: 50px 0;
+}
+footer p{
+    color: #616ca8;
+    font-size: 14px;
+    margin: 0;
+}
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    padding: 0;
+    margin: 0;
+}
+footer ul li{
+    margin-right: 30px;
+}
+footer ul li:last-child{
+    margin-right: 0px;
+}
+footer ul li a{
+    color: #969bbf;
+    font-size: 17px;
+    transition: 0.4s all ease-in-out;
+}
+footer ul li a:hover{
+    color: #008ed6;
+}
+
+
+
+
+
+
+
+
